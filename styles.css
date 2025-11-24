@@ -1,181 +1,232 @@
 /* -------------------------- */
-/* GLOBAL STYLES              */
+/* RESET                       */
 /* -------------------------- */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #fafafa;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* -------------------------- */
-/* HEADER + NAV               */
+/* GLOBAL PAGE STYLING         */
+/* -------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfaf5; /* very light tan */
+  color: #222; /* darker gray for text */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* HEADINGS */
+h1 {
+  color: #228B22; /* forest green */
+}
+
+h2 {
+  margin-top: 20px;
+  color: #2e9c2e; /* lighter green */
+}
+
+/* LINKS */
+a {
+  color: #8B0000; /* Maroon */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTONS */
+button {
+  background-color: #228B22;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 2px;
+}
+
+button:hover {
+  background-color: #2e9c2e;
+}
+
+/* -------------------------- */
+/* HEADER + NAVIGATION         */
 /* -------------------------- */
 header {
-    background: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
+  background: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
 
 .topnav {
-    margin-top: 10px;
+  margin-top: 10px;
+  overflow: hidden;
 }
 
 .topnav a {
-    margin: 0 10px;
-    color: #f2f2f2;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-.topnav a.active {
-    font-weight: bold;
-    text-decoration: underline;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .topnav a:hover {
-    color: #ffd700;
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #228B22;
+  color: white;
 }
 
 /* -------------------------- */
-/* LANDING PAGE STYLES        */
+/* LANDING PAGE STYLES         */
 /* -------------------------- */
 .landing-title {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 2rem;
-    color: #333;
+  text-align: center;
+  font-size: 5em;
+  font-weight: 900;
+  text-shadow: #a0bfae 0px 5px;
 }
 
 .index-blurb {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.1rem;
-    color: #444;
+  margin: 0 20%;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.landing-photo {
+  display: flex;
+  justify-content: center;
 }
 
 .landing-photo img {
-    width: 100%;
-    max-width: 800px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  margin-top: 20px;
 }
 
 .landing-caption {
-    text-align: center;
-    color: #555;
-    margin-bottom: 20px;
+  font-size: 12px;
+  color: #555;
+  margin-top: 6px;
+  text-align: center;
 }
 
 /* -------------------------- */
-/* FOOTER                     */
+/* PAGE ANIMATIONS             */
 /* -------------------------- */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 40px;
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0; 
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1.4s;
+}
+
+.fade-in.delayed {
+  animation-delay: 1.4s;
 }
 
 /* -------------------------- */
-/* ACCORDION DROPDOWNS        */
-/* -------------------------- */
-.accordion-btn {
-    width: 100%;
-    text-align: left;
-    padding: 14px;
-    background-color: #e6e6e6;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-top: 8px;
-}
-
-.accordion-btn.active, .accordion-btn:hover {
-    background-color: #d0d0d0;
-}
-
-.accordion-content {
-    display: none;
-    padding: 12px;
-    background-color: #fafafa;
-    border-left: 3px solid #555;
-    margin-bottom: 10px;
-}
-
-/* -------------------------- */
-/* TEACHABLE MACHINE DEMO     */
-/* -------------------------- */
-.tm-wrapper {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.tm-wrapper button {
-    margin: 10px;
-    padding: 10px 16px;
-    cursor: pointer;
-}
-
-#label-container div {
-    margin: 4px 0;
-    background: #f4f4f4;
-    padding: 6px;
-}
-
-/* -------------------------- */
-/* VIDEO EMBED                */
-/* -------------------------- */
-.video-wrapper iframe {
-    width: 100%;
-    max-width: 640px;
-    height: 360px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* -------------------------- */
-/* PROJECT STATEMENT CARDS     */
+/* PROJECT STATEMENT CARDS      */
 /* -------------------------- */
 .project-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .project-card h3 {
-    margin-top: 0;
-    color: #333;
+  margin-top: 0;
+  color: #228B22;
 }
 
 .project-card p {
-    color: #444;
-    line-height: 1.5;
+  color: #444;
+  line-height: 1.5;
 }
 
 /* -------------------------- */
-/* PAGE SECTION SPACING       */
+/* TEACHABLE MACHINE DEMO      */
+/* -------------------------- */
+.tm-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.tm-wrapper button {
+  margin: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+#label-container div {
+  margin: 4px 0;
+  background: #f4f4f4;
+  padding: 6px;
+}
+
+/* -------------------------- */
+/* VIDEO EMBED                 */
+/* -------------------------- */
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 640px;
+  height: 360px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* -------------------------- */
+/* FOOTER                      */
+/* -------------------------- */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* -------------------------- */
+/* PAGE SECTION SPACING        */
 /* -------------------------- */
 .page-section {
-    max-width: 900px;
-    padding: 20px;
-    margin: auto;
+  max-width: 900px;
+  padding: 20px;
+  margin: auto;
 }
+
+/* -------------------------- */
+/* ADDITIONAL OPTIONAL STYLES  */
+/* -------------------------- */
+/* Buttons inside TM demo and other pages are already handled above */
+
+/* Accordion dropdowns can be added later if needed */
 
