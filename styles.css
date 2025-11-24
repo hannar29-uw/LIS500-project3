@@ -1,57 +1,181 @@
 /* -------------------------- */
+/* GLOBAL STYLES              */
+/* -------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fafafa;
+}
+
+/* -------------------------- */
+/* HEADER + NAV               */
+/* -------------------------- */
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.topnav {
+    margin-top: 10px;
+}
+
+.topnav a {
+    margin: 0 10px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.topnav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.topnav a:hover {
+    color: #ffd700;
+}
+
+/* -------------------------- */
+/* LANDING PAGE STYLES        */
+/* -------------------------- */
+.landing-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.index-blurb {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.landing-photo img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.landing-caption {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* -------------------------- */
+/* FOOTER                     */
+/* -------------------------- */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/* -------------------------- */
 /* ACCORDION DROPDOWNS        */
 /* -------------------------- */
 .accordion-btn {
-  width: 100%;
-  text-align: left;
-  padding: 14px;
-  background-color: #e6e6e6;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  margin-top: 8px;
+    width: 100%;
+    text-align: left;
+    padding: 14px;
+    background-color: #e6e6e6;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 8px;
 }
 
 .accordion-btn.active, .accordion-btn:hover {
-  background-color: #d0d0d0;
+    background-color: #d0d0d0;
 }
 
 .accordion-content {
-  display: none;
-  padding: 12px;
-  background-color: #fafafa;
-  border-left: 3px solid #555;
-  margin-bottom: 10px;
+    display: none;
+    padding: 12px;
+    background-color: #fafafa;
+    border-left: 3px solid #555;
+    margin-bottom: 10px;
 }
 
 /* -------------------------- */
-/* TM DEMO                    */
+/* TEACHABLE MACHINE DEMO     */
 /* -------------------------- */
 .tm-wrapper {
-  margin-top: 20px;
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .tm-wrapper button {
-  margin: 10px;
-  padding: 10px 16px;
-  cursor: pointer;
+    margin: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
 }
 
 #label-container div {
-  margin: 4px 0;
-  background: #f4f4f4;
-  padding: 6px;
+    margin: 4px 0;
+    background: #f4f4f4;
+    padding: 6px;
 }
 
 /* -------------------------- */
 /* VIDEO EMBED                */
 /* -------------------------- */
 .video-wrapper iframe {
-  width: 100%;
-  max-width: 640px;
-  height: 360px;
-  display: block;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    display: block;
+    margin: 0 auto;
 }
+
+/* -------------------------- */
+/* PROJECT STATEMENT CARDS     */
+/* -------------------------- */
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.project-card p {
+    color: #444;
+    line-height: 1.5;
+}
+
+/* -------------------------- */
+/* PAGE SECTION SPACING       */
+/* -------------------------- */
+.page-section {
+    max-width: 900px;
+    padding: 20px;
+    margin: auto;
+}
+
