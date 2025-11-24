@@ -1,0 +1,57 @@
+/* -------------------------- */
+/* ACCORDION DROPDOWNS        */
+/* -------------------------- */
+.accordion-btn {
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  background-color: #e6e6e6;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.accordion-btn.active, .accordion-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px;
+  background-color: #fafafa;
+  border-left: 3px solid #555;
+  margin-bottom: 10px;
+}
+
+/* -------------------------- */
+/* TM DEMO                    */
+/* -------------------------- */
+.tm-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.tm-wrapper button {
+  margin: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+#label-container div {
+  margin: 4px 0;
+  background: #f4f4f4;
+  padding: 6px;
+}
+
+/* -------------------------- */
+/* VIDEO EMBED                */
+/* -------------------------- */
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 640px;
+  height: 360px;
+  display: block;
+  margin: 0 auto;
+}
