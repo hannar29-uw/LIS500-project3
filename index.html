@@ -1,193 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LIS-500 ML Project</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Code & Power</title>
 
-  <!-- Teachable Machine libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- HEADER + NAV -->
+<!-- // HEADER + NAV // -->
 <header>
-  <h1>LIS-500 Machine Learning Project</h1>
-  <div class="topnav" class="index-text">
-    <a href="index.html">Home</a> 
-    <a href="about.html">About Us</a> 
-    <a href="techhero.html">Tech Hero</a> 
-    <a href="resource-guide.html">Resource Guide</a>
-    <a class="active" href="ml.html">ML Project</a>
-  </div>
+    <h1>LIS-500 Project 2</h1>
+
+    <div class="topnav index-text">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="techhero.html">Tech Hero</a>
+        <a href="resource-guide.html">Resource Guide</a>
+        <a href="ml-project.html">Machine Learning Project</a>
+    </div>
 </header>
 
+<!-- MAIN CONTENT -->
 <div class="fade-in">
-  <h1 class="landing-title">Teachable Machine + Unmasking AI</h1>
+    <h1 class="landing-title">Code and Power</h1>
 </div>
 
 <div class="fade-in delayed">
-  <p class="index-blurb">
-    For this project, we created a custom image classification model using Google's Teachable Machine. 
-    We connected our work to themes from *Unmasking AI* and reflected on the social, ethical, and practical implications 
-    of algorithmic systems. Each group member wrote their own project statement, which you can expand below.
-  </p>
-</div>
+    <p class="index-blurb">
+        Welcome to our LIS 500 webpage! We’re excited to share more about our group, our tech
+        inspiration, and so much more with the rest of the class.
+        Feel free to look around the website or browse through some of the resources for more
+        information about
 
-
-<!-- ============================== -->
-<!--   ACCORDION: PROJECT STATEMENTS -->
-<!-- ============================== -->
-
-<h2 class="section-title">Project Statements</h2>
-
-<div class="accordion">
-
-  <!-- CASEY -->
-  <button class="accordion-btn">Casey — Project Statement</button>
-  <div class="accordion-content">
-    <p>
-      REPLACE WITH CASEY'S PROJECT STATEMENT (1000+ words if graded individually).
-    </p>
-  </div>
-
-  <!-- ALYSSA -->
-  <button class="accordion-btn">Alyssa — Project Statement</button>
-  <div class="accordion-content">
-    <p>
-      REPLACE WITH ALYSSA'S PROJECT STATEMENT.
-    </p>
-  </div>
-
-  <!-- AYMEN -->
-  <button class="accordion-btn">Aymen — Project Statement</button>
-  <div class="accordion-content">
-    <p>
-      REPLACE WITH AYMEN'S PROJECT STATEMENT.
-    </p>
-  </div>
-
-</div>
-
-
-<!-- ============================== -->
-<!--    TEACHABLE MACHINE DEMO      -->
-<!-- ============================== -->
-
-<h2 class="section-title">Teachable Machine Demo</h2>
-
-<p class="index-blurb">
-  Our model classifies images related to our chosen subject from *Unmasking AI*. 
-  When you click "Start", the webcam will activate and the model will begin classifying in real time.
-</p>
-
-<div class="tm-wrapper">
-  <video id="webcam" autoplay playsinline width="320" height="240"></video>
-  <div id="label-container"></div>
-  <button id="start-btn">Start</button>
-  <button id="stop-btn">Stop</button>
-  <p id="status"></p>
-</div>
-
-
-<!-- ============================== -->
-<!--           VIDEO EMBED          -->
-<!-- ============================== -->
-
-<h2 class="section-title">Video Demonstration</h2>
-
-<div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/REPLACE_VIDEO_ID" 
-    title="Algorithm Demo Video"
-    frameborder="0"
-    allowfullscreen></iframe>
-</div>
-
-
-<!-- ============================== -->
-<!--          DOWNLOADS             -->
-<!-- ============================== -->
-
-<h2 class="section-title">Downloads + GitHub</h2>
-
-<ul class="index-blurb">
-  <li><a href="downloads/model.zip">Download Teachable Machine Model (.zip)</a></li>
-  <li><a href="https://github.com/YOUR_USERNAME/YOUR_REPO">GitHub Repository</a></li>
-</ul>
-
-
-<!-- FOOTER -->
-<footer class="index-text">
-  <p>© 2025 by Aymen Hamdan, Alyssa Hannam, Casey Foubert </p>
-</footer>
-
-<!-- ============================== -->
-<!--     JS FOR ACCORDIONS          -->
-<!-- ============================== -->
-<script>
-  const accordions = document.querySelectorAll(".accordion-btn");
-  accordions.forEach(btn => {
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("active");
-      const content = btn.nextElementSibling;
-      content.style.display = content.style.display === "block" ? "none" : "block";
-    });
-  });
-</script>
-
-<!-- ============================== -->
-<!--     TEACHABLE MACHINE JS        -->
-<!-- ============================== -->
-<script>
-  const MODEL_URL = "REPLACE_WITH_TM_MODEL_URL"; // EXAMPLE: https://teachablemachine.withgoogle.com/models/abcd1234/
-  const modelURL = MODEL_URL + "model.json";
-  const metadataURL = MODEL_URL + "metadata.json";
-
-  let model, webcam, maxPredictions;
-
-  async function init() {
-    document.getElementById("status").innerText = "Loading model...";
-    model = await tmImage.load(modelURL, metadataURL);
-    maxPredictions = model.getTotalClasses();
-
-    webcam = new tmImage.Webcam(320, 240, true);
-    await webcam.setup();
-    document.getElementById("webcam").srcObject = webcam.webcam.canvas.captureStream();
-
-    document.getElementById("status").innerText = "Model Loaded.";
-  }
-
-  async function start() {
-    await webcam.play();
-    window.requestAnimationFrame(loop);
-  }
-
-  async function loop() {
-    webcam.update();
-    await predict();
-    window.requestAnimationFrame(loop);
-  }
-
-  async function predict() {
-    const predictions = await model.predict(webcam.canvas);
-    const labelContainer = document.getElementById("label-container");
-    labelContainer.innerHTML = "";
-
-    predictions.forEach(p => {
-      const line = document.createElement("div");
-      line.innerText = `${p.className}: ${(p.probability * 100).toFixed(1)}%`;
-      labelContainer.appendChild(line);
-    });
-  }
-
-  document.getElementById("start-btn").addEventListener("click", start);
-  document.getElementById("stop-btn").addEventListener("click", () => webcam.stop());
-
-  init();
-</script>
-
-</body>
-</html>
