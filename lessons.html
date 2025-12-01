@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lessons Learned – LIS 500 Project 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER + NAV -->
+<header>
+    <h1>LIS 500 Project 3</h1>
+    <div class="topnav index-text">
+        <a href="index.html">Home</a>
+        <a href="ml-project.html">Project Scope</a>
+        <a href="process.html">Process</a>
+        <a class="active" href="lessons.html">Lessons Learned</a>
+        <a href="video-test.html">Video & Test Model</a>
+        <a href="project-statements.html">Project Statements</a>
+    </div>
+</header>
+
+<!-- PAGE CONTENT -->
+<section class="page-section">
+    <h2>Lessons Learned</h2>
+
+    <p>
+        Working with our Teachable Machine model gave us a closer look at how bias shows up in machine learning,
+        even when the project is something small and personal. When we tested our model, we noticed that it really 
+        struggled with identifying lighter and medium skin tones. Instead of giving an accurate range, it defaulted 
+        to classifying a lot of inputs as “dark.” This wasn’t something we coded or asked it to do — it just happened 
+        because of the way the training data worked.
+    </p>
+
+    <p>
+        Seeing that firsthand connected back to Buolamwini’s work from this semester, especially her examples of how 
+        algorithms reflect the gaps in the data they’re built on. Even with a simple project, we could see how easy it is 
+        for a model to become skewed. It wasn’t dramatic or intentionally harmful, but it showed that bias isn’t only a 
+        “big tech” issue. It’s built into the structure of machine learning unless you actively watch for it.
+    </p>
+
+    <p>
+        As a group, this pushed us to think more about how data needs to be curated and balanced. We already understood 
+        the concept from the readings, but working with the model made the problem feel more real. It shaped how we 
+        approached testing, how we talked about the design of our classifier, and how we evaluated what the model could 
+        and couldn’t do responsibly.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="index-text">
+    <p>© 2025 by Aymen Hamdan, Alyssa Hannam, Casey Foubert</p>
+</footer>
+
+</body>
+</html>
