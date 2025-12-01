@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lessons Learned – LIS 500 Project 3</title>
+    <title>Lessons Learned</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,42 +16,40 @@
         <a href="ml-project.html">Project Scope</a>
         <a href="process.html">Process</a>
         <a class="active" href="lessons.html">Lessons Learned</a>
-        <a href="video-test.html">Video & Test Model</a>
+        <a href="video-test.html">Video and Test Model</a>
         <a href="project-statements.html">Project Statements</a>
     </div>
 </header>
 
-<!-- PAGE CONTENT -->
 <section class="page-section">
+
     <h2>Lessons Learned</h2>
 
     <p>
-        Working with our Teachable Machine model gave us a closer look at how bias shows up in machine learning,
-        even when the project is something small and personal. When we tested our model, we noticed that it really 
-        struggled with identifying lighter and medium skin tones. Instead of giving an accurate range, it defaulted 
-        to classifying a lot of inputs as “dark.” This wasn’t something we coded or asked it to do — it just happened 
-        because of the way the training data worked.
+        Working with our Teachable Machine model made it clear how easy it is for bias to appear, even when the project is small and simple. We trained the model to identify different skin tones using the webcam. Even with the samples we collected, the model consistently labeled most inputs as dark and rarely identified medium or light tones. This showed us how uneven or limited training data changes the way a model sees the world.
     </p>
 
     <p>
-        Seeing that firsthand connected back to Buolamwini’s work from this semester, especially her examples of how 
-        algorithms reflect the gaps in the data they’re built on. Even with a simple project, we could see how easy it is 
-        for a model to become skewed. It wasn’t dramatic or intentionally harmful, but it showed that bias isn’t only a 
-        “big tech” issue. It’s built into the structure of machine learning unless you actively watch for it.
+        This connected directly to Joy Buolamwini's work and the readings from this semester. She describes how algorithms often fail to recognize certain faces because of the data used to train them. Seeing our own project repeat this pattern helped us better understand how bias is built into machine learning systems. Even when the intention is good, the output still reflects the limits of the dataset.
     </p>
 
     <p>
-        As a group, this pushed us to think more about how data needs to be curated and balanced. We already understood 
-        the concept from the readings, but working with the model made the problem feel more real. It shaped how we 
-        approached testing, how we talked about the design of our classifier, and how we evaluated what the model could 
-        and couldn’t do responsibly.
+        Our experience reinforced how important it is to think critically about data collection and representation. Small choices in the process shape the model's predictions and affect the accuracy and fairness of the system. This assignment helped us see that bias is not only something that happens in large tech companies. It can appear in projects like ours, where the stakes are low and the design is simple.
     </p>
+
+    <h3>Example Output From Our Model</h3>
+
+    <div class="lesson-image-wrapper">
+        <img src="model.ex.png" alt="Example output from our model" class="lesson-image">
+        <p class="landing-caption">The model frequently predicted dark tone even when the input was clearly different.</p>
+    </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer class="index-text">
     <p>© 2025 by Aymen Hamdan, Alyssa Hannam, Casey Foubert</p>
 </footer>
 
 </body>
 </html>
+
