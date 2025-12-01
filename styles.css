@@ -239,5 +239,25 @@ footer {
   max-width: 900px;
   padding: 20px;
   margin: auto;
+
+  /* Paragraph spacing for all pages */
+.page-section p {
+    margin-bottom: 18px;
+}
+
+/* Extra spacing for images on Lessons Learned */
+.lesson-image-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.lesson-image {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
 }
 
