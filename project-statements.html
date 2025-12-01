@@ -127,7 +127,81 @@ In working on this project, I was reminded again and again of the limits of tech
         <summary>Aymen – Project Statement</summary>
         <p>
             <!-- Paste Aymen's 1000-word statement here -->
-            REPLACE WITH AYMEN'S PROJECT STATEMENT
+            “Unmasking AI,” a book by Dr. Joy Buolamwini, aims to uncover the truths of encoded
+            discrimination and exclusion in technology. This is not specifically about content that we 
+            are able to see on the user interface; but rather, what is happening behind the scenes that
+            fosters discrimination in technology. In a digital world that is being increasingly overrun
+            by AI tools and softwares, it is also increasingly important that we understand the functions
+            behind these tools, and the shortcomings that come with them. Thus, our group set out to create
+            an AI software that can further examine the effect of encoded bias in technology. 
+            <p>
+            In Unmasking AI, Dr. Buolamwini used a facial recognition software, and encountered interesting 
+            results. She noticed that the software would not normally detect her face; 
+            however, upon wearing a white mask, the software now detected a face.
+            While the purpose of Artificial Intelligence is to be able to sort of act on its own, 
+            the thoughts and ideas that it creates are not made up like they are in a human mind. 
+            Instead, AI softwares utilize pre-existing information, whether that be datasets, real-time
+            data feed, web scraping of the internet, and more. For example, softwares such as 
+            Google Gemini utilize web scraping to produce fast responses to user prompts. What did 
+            this mean for the software in Buolamwini? Well, the facial recognition software was
+            noticeably biased towards white faces. Buolamwini attributed this to an encoded bias
+            within the software that is a result of a biased dataset that the software was trained on.
+            This software is an example of an image classifying model, which scans visual images and 
+            classifies them based on similar images in its pre-existing dataset. For image classifying 
+            models such as facial recognition softwares, images of faces are commonly used as references
+            for the model. Thus, the inability of the model to detect Dr. Buolamwini’s darker skinned face 
+            can be attributed to a lack of darker-skinned data being used to make the model, and a dominance
+            of lighter-skinned image data. This is unfortunately a common issue in technology of today, as 
+            lighter skinned males are more likely to be represented and served by new technologies, whether 
+            they utilize Artificial Intelligence or not.
+            <p>
+            For this project, our group wanted to perform a similar test and witness the results firsthand. 
+            So, we decided to use Teachable Machines to create an image classifying model that scans
+            faces and classifies them into a skin tone category. Image classifying models on Teachable
+            Machines are made using data (in this case, images) separated into categories. I created 
+            three categories: light, medium, and dark skinned. Next, I had people of various skin tones 
+            sit in front of the computer camera and scan their face, whilst moving their face around to
+            capture all angles. These trials were done in similar lightings and settings. Then, the
+            Teachable Machines program created an image classifying model based on these images. 
+            <p>
+            As a Middle Eastern person, people of my ethnicity and skin tone are often labeled as
+            “brown.” So, I was expecting to be detected as medium skinned by the model. For reference,
+            not only does the model detect a skin tone, but also the percentage of each skin tone
+            detected in the case that the person is not exactly one tone (for example, a person could 
+            be detected as 100% dark, 75% medium and 25% light, etc.). To my surprise, my face was 
+            detected as 100% dark skinned. I tried adjusting my background lighting, but got the same
+            result. However, the palm of my hand was detected as about 90% medium skinned. I had a few
+            people test the program, and they were almost always detected as nearly 100% dark skinned.
+            I decided to try remaking the model with slightly different data, which was done by removing
+            data from the dark skinned category and scanning a different person into the category. 
+            I also noticed that one category had significantly more face images than the others, so I
+            confined each category to about 130 images. After regenerating the model, I was still
+            getting the same results, and after a few lighter-skinned people tested the model, they
+            told me that they were also being detected as dark-skinned.
+            <p>
+            But why is this happening? After all, I reduced encoded biases as much as possible by 
+            having the same amount of image samples for each category, having the people being used
+            for the samples perform the same movements, and more. Well, the results that I observed 
+            are a prime example of the encoded bias that Dr. Buolamwini discussed in Unmasking AI. 
+            Artificial Intelligence models are never 100% accurate or reliable, as they feature biases
+            that are results of misrepresentation of certain groups in their training data. In cases
+            like this, in which the AI model is used on real human beings, we see that these digital 
+            shortcomings can have serious effects on underrepresented groups. In Unmasking AI, 
+            Dr. Buolamwini discussed how many facial recognition technologies are biased against
+            darker-skinned individuals and women. For example, many security cameras utilize facial 
+            recognition technology, and in cases such as theft, the facial recognition technology 
+            can falsely detect people of underrepresented groups as suspects.
+            <p>
+            So, how do we minimize encoded bias and discrimination in the technological space? 
+            Well, in technologies such as Artificial Intelligence, it is important that we give 
+            the AI model sufficient and diverse data to train itself on. For example, when I made 
+            the image classifying model on Teachable Machines, maybe I could have scanned faces of 
+            more people; or maybe I could have had everyone sit in the same spot in the same room,
+            in order to ensure that background lighting and conditions were consistent. Maybe I could
+            have included a mix of men and women, in order to capture various facial features that may
+            have had an effect on the results of the model. Whatever could have been done, it is important 
+            that the data that a model is trained on is representative and equal; representative of 
+            various groups, and containing equal conditions during data creation.
         </p>
     </details>
 
