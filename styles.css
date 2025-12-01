@@ -259,5 +259,21 @@ footer {
     margin: 0 auto 10px auto;
 }
 
+/* -------------------------- */
+/* VIDEO SECTION SPACING       */
+/* -------------------------- */
+.video-section {
+    margin-bottom: 40px;  /* adds space between video sections */
+}
+
+.video-section p {
+    margin-bottom: 20px;  /* adds space after paragraphs for readability */
+}
+
+.video-wrapper {
+    margin-bottom: 20px;  /* adds space after the embedded video */
+}
+
+
 }
 
