@@ -12,25 +12,30 @@
 /* -------------------------- */
 body {
   font-family: Arial, sans-serif;
-  background-color: #fdfaf5; /* very light tan */
-  color: #222; /* darker gray for text */
+  background-color: #fdfaf5;
+  color: #222;
   line-height: 1.6;
   padding: 20px;
 }
 
+/* Paragraph spacing for all normal content pages */
+.page-section p {
+  margin-bottom: 14px;
+}
+
 /* HEADINGS */
 h1 {
-  color: #228B22; /* forest green */
+  color: #228B22;
 }
 
 h2 {
   margin-top: 20px;
-  color: #2e9c2e; /* lighter green */
+  color: #2e9c2e;
 }
 
 /* LINKS */
 a {
-  color: #8B0000; /* Maroon */
+  color: #8B0000;
   text-decoration: none;
 }
 
@@ -131,10 +136,10 @@ header {
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 .fade-in {
-  opacity:0; 
-  animation:fadeIn ease-in 1;
-  animation-fill-mode:forwards;
-  animation-duration:1.4s;
+  opacity:0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
 }
 
 .fade-in.delayed {
@@ -165,9 +170,22 @@ header {
   color: #228B22;
 }
 
+/* Paragraph spacing inside the project statement cards */
 .project-card p {
   color: #444;
   line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+/* -------------------------- */
+/* EXAMPLE IMAGE STYLE          */
+/* -------------------------- */
+.example-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
 }
 
 /* -------------------------- */
@@ -222,11 +240,4 @@ footer {
   padding: 20px;
   margin: auto;
 }
-
-/* -------------------------- */
-/* ADDITIONAL OPTIONAL STYLES  */
-/* -------------------------- */
-/* Buttons inside TM demo and other pages are already handled above */
-
-/* Accordion dropdowns can be added later if needed */
 
