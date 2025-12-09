@@ -230,6 +230,19 @@ header {
   margin: 0 auto 10px auto;
 }
 
+/* ⭐ NEW: Side-by-side images for Teachable Machine examples */
+.lesson-images-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lesson-images-row .lesson-image-wrapper {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
 /* -------------------------- */
 /* TEACHABLE MACHINE DEMO      */
 /* -------------------------- */
@@ -315,6 +328,7 @@ a.button-link:hover {
   text-decoration: none !important;
   color: white !important;
 }
+
 
 
 
