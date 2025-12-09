@@ -230,7 +230,7 @@ header {
   margin: 0 auto 10px auto;
 }
 
-/* ⭐ NEW: Side-by-side images for Teachable Machine examples */
+/* ⭐ NEW: Side by side images for Teachable Machine examples */
 .lesson-images-row {
   display: flex;
   gap: 20px;
