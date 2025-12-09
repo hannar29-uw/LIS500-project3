@@ -285,4 +285,24 @@ footer {
   margin: auto;
 }
 
+/* -------------------------- */
+/* BUTTON-LINK STYLE (NEW)    */
+/* -------------------------- */
+.button-link {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 10px 0;
+  background-color: #228B22;  /* matches your button + active nav color */
+  color: white !important;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #2e9c2e;  /* your existing hover green */
+  text-decoration: none;      /* overrides global link hover underline */
+}
+
 
