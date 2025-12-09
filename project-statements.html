@@ -195,8 +195,8 @@
             the thoughts and ideas that it creates are not made up like they are in a human mind. 
             Instead, AI softwares utilize pre-existing information, whether that be datasets, real-time
             data feed, web scraping of the internet, and more. For example, softwares such as 
-            Google Gemini utilize web scraping to produce fast responses to user prompts (GeeksForGeeks, 2025). What did 
-            this mean for the software in Buolamwini? Well, the facial recognition software was
+            Google Gemini utilize web scraping to produce fast responses to user prompts (GeeksForGeeks, 2025). 
+            What did this mean for the software in Buolamwini? Well, the facial recognition software was
             noticeably biased towards white faces. Buolamwini attributed this to an encoded bias
             within the software that is a result of a biased dataset that the software was trained on.
             This software is an example of an image classifying model, which scans visual images and 
@@ -214,8 +214,13 @@
             Machines are made using data (in this case, images) separated into categories. I created 
             three categories: light, medium, and dark skinned. Next, I had people of various skin tones 
             sit in front of the computer camera and scan their face, whilst moving their face around to
-            capture all angles. These trials were done in similar lightings and settings. Then, the
-            Teachable Machines program created an image classifying model based on these images. 
+            capture all angles. These trials were done in similar lightings and settings. Not only did I choose
+            people based on skin tone, but I also chose people of various ethnicities to ensure variance.
+            Before training the model, I looked at the individual images across all three classes and ensured
+            that the captured color variance was sufficient to realistically distinguish between the 'light,' 
+            'medium,' and 'dark' categories, confirming that the typical webcam lighting did not wash out 
+            or uniformly darken the differences needed for the model to learn.
+            Then, the Teachable Machines program created an image classifying model based on these images. 
             <p>
             As a Middle Eastern person, people of my ethnicity and skin tone are often labeled as
             “brown.” So, I was expecting to be detected as medium skinned by the model. For reference,
@@ -225,10 +230,14 @@
             detected as 100% dark skinned. I tried adjusting my background lighting, but got the same
             result. However, the palm of my hand was detected as about 90% medium skinned. I had a few
             people test the program, and they were almost always detected as nearly 100% dark skinned.
+            I initially hypothesized that the main issue came from the "dark-skinned" data, potentially
+            due to different camera lighting or background lighting in the images of this category.
             I decided to try remaking the model with slightly different data, which was done by removing
             data from the dark skinned category and scanning a different person into the category. 
             I also noticed that one category had significantly more face images than the others, so I
-            confined each category to about 130 images. After regenerating the model, I was still
+            confined each category to about 130 images. I ensured that the people who were scanned were
+            a similar distance from the camera, and they were in similar lighting and nobody 
+            else was in the background. After regenerating the model, I was still
             getting the same results, and after a few lighter-skinned people tested the model, they
             told me that they were also being detected as dark-skinned.
             <p>
@@ -252,7 +261,10 @@
             more people; or maybe I could have had everyone sit in the same spot in the same room,
             in order to ensure that background lighting and conditions were consistent. Maybe I could
             have included a mix of men and women, in order to capture various facial features that may
-            have had an effect on the results of the model. Whatever could have been done, it is important 
+            have had an effect on the results of the model. I believe scanning more people would have
+            made the biggest impact on the success on the model, as this would not only capture more
+            variance in skin tone, but also variance in things such as facial features or even shirt
+            colors. Whatever could have been done, it is important 
             that the data that a model is trained on is representative and equal; representative of 
             various groups, and containing equal conditions during data creation.
         </p>
